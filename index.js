@@ -35,7 +35,12 @@ function userPrompt() {
     },
   ])
   .then((answers) => {
-    if (ans)
+    if (answers.text.length > 3) {
+      userPrompt();
+    }else {
+      
+    }
+    }
   }
 }
 
