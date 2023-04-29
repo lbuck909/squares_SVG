@@ -4,7 +4,7 @@ const { Triangle, Circle, Square } = require('./lib/shapes');
 
 //end user questions to create logo
 function userPrompt() {
-  .prompt([
+  prompt([
     {
       type: 'list',
       name:'What shape would you like for your logo?',
@@ -38,9 +38,13 @@ function userPrompt() {
     if (answers.text.length > 3) {
       userPrompt();
     }else {
-      
+      writeShapeFile('logo.svg', answers);
     }
-    }
-  }
-}
 
+  });
+}
+//create func. use string, add ht and wd, place user text ontop, shape choice and create svg file
+function writeToFile( fileName, answers) {
+let svgString = "";
+
+}
