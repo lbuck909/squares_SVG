@@ -68,7 +68,7 @@ let userShape;
 
 
 //text color and alignment. Use default font size of 30 (needs to be readable)
-svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${answer.characterColor}">${answer.text>}</text>`;
+svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${answer.characterColor}">${answer.text}</text>`;
 svgString += "</g>";
 svgString += "</svg>";
 }
