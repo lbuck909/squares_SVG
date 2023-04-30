@@ -38,7 +38,7 @@ function userPrompt() {
     if (answer.text.length > 3) {
       userPrompt();
     }else {
-      writeShapeFile('logo.svg', answer);
+      writeShapeFile('fileName.svg', answer);
     }
 
   });
@@ -72,8 +72,8 @@ svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${a
 svgString += "</g>";
 svgString += "</svg>";
 }
-fs.writeToFile(fileName, svgString, (err) => {
+fs.writeToFile('fileName.svg', svgString, (err) => {
   err? console.log(err) : console.log("generated logo.svg");
 });
-
+ 
 userPrompt();
