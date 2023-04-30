@@ -72,4 +72,8 @@ svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${a
 svgString += "</g>";
 svgString += "</svg>";
 }
+fs.writeToFile(fileName, svgString, (err) => {
+  err? console.log(err) : console.log("generated logo.svg");
+});
 
+userPrompt();
