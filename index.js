@@ -23,14 +23,14 @@ function userPrompt() {
     {
       type: 'input',
       name: 'What color would you like the text? (Enter color keyword or hexadecimal number)',
-      response: ' characterColor',
+      response: 'characterColor',
       
     },
 
     {
       type: 'input',
       name: 'What color would you like the chosen shape? (Enter color keyword or hexadecimal number)',
-      response: ' shapeColor',
+      response: 'shapeColor',
       
     },
   ])
