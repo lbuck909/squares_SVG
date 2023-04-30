@@ -50,10 +50,16 @@ let svgString = "";
 svgString += `${answer.shape}`;
 //pull size of shape from w3.org
 svgString = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
-//g tag needed to font doesnt move to the back of logo
+//g tag needed to apply transformations to the child element
 svgString += "<g>";
 
-//text color and alignment. Use default font size of 30 (needs to be readable)
+//user input, polygon properties and color of the desired shape
 
+
+
+//text color and alignment. Use default font size of 30 (needs to be readable)
+svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${answer.characterColor}">${answer.text>}</text>`;
+svgString += "</g>";
+svgString += "</svg>";
 }
 
