@@ -54,7 +54,17 @@ svgString = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.or
 svgString += "<g>";
 
 //user input, polygon properties and color of the desired shape
-
+let userShape;
+  if (answer.shape === 'Square') {
+    userShape = new Square();
+    svgString += `rect x="70" y="70" width="150" height="150" fill="${answer.shapeColor}"/>`;
+  } else if (answer.shape === 'Circle'){
+    userShape = new Circle();
+    svgString += `<circle cx="150" cy="150" r="90"  fill="${answer.shapeColor}"/>`;
+  } else{
+    userShape = new Triangle();
+    svgString += `<polygon points="0,200 300,200 150,0 fill="${answer.shapecolor}"/>;`
+  }
 
 
 //text color and alignment. Use default font size of 30 (needs to be readable)
