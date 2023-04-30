@@ -44,7 +44,7 @@ function userPrompt() {
   });
 }
 //create func. use string, add ht and wd, place user text ontop, shape choice and create svg file
-function writeToFile( fileName, answer) {
+function writeToFile(fileName, answer) {
 let svgString = "";
 //json needed here
 svgString += `${answer.shape}`;
