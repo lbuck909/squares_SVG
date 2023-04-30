@@ -1,10 +1,10 @@
-const fs = require('inquirer');
 const inquirer = require('fs');
+const fs = require('inquirer');
 const { Triangle, Circle, Square } = require('./lib/shapes');
 
 //end user questions to create logo
 function userPrompt() {
-  prompt([
+  inquirer.prompt([
     {
       type: 'list',
       name:'What shape would you like for your logo?',
@@ -38,7 +38,7 @@ function userPrompt() {
     if (answer.text.length > 3) {
       userPrompt();
     }else {
-      writeShapeFile('fileName.svg', answer);
+      writeShapeFile('logo.svg', answer);
     }
 
   });
@@ -71,9 +71,10 @@ let userShape;
 svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${answer.characterColor}">${answer.text}</text>`;
 svgString += "</g>";
 svgString += "</svg>";
-}
+
 fs.writeToFile('fileName.svg', svgString, (err) => {
   err? console.log(err) : console.log("generated logo.svg");
 });
- 
+
+}
 userPrompt();
