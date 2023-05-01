@@ -1,5 +1,5 @@
-const inquirer = require('fs');
-const fs = require('inquirer');
+const inquirer = require('inquirer');
+const fs = require('fs');
 const { Triangle, Circle, Square } = require('./lib/shapes');
 
 //end user questions to create logo
@@ -38,7 +38,7 @@ function userPrompt() {
     if (answer.text.length > 3) {
       userPrompt();
     }else {
-      writeShapeFile('logo.svg', answer);
+      writeShapeFile('fileName.svg', answer);
     }
 
   });
