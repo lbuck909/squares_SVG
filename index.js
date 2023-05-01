@@ -7,38 +7,38 @@ function userPrompt() {
   inquirer.prompt([
     {
       type: 'list',
-      name:'What shape would you like for your logo?',
+      message:'What shape would you like for your logo?',
       choices: [ 'Triangle', 'Square', 'Circle'],
-      response: 'shape',
+      name: 'shape',
       
     },
 
     {
       type: 'input',
-      name:'What text would you like for the logo? (Enter up to three charaters)',
-      response: 'text',
+      message:'What text would you like for the logo? (Enter up to three charaters)',
+      name: 'text',
       
     },
 
     {
       type: 'input',
-      name: 'What color would you like the text? (Enter color keyword or hexadecimal number)',
-      response: 'characterColor',
+      message: 'What color would you like the text? (Enter color keyword or hexadecimal number)',
+      name: 'characterColor',
       
     },
 
     {
       type: 'input',
-      name: 'What color would you like the chosen shape? (Enter color keyword or hexadecimal number)',
-      response: 'shapeColor',
+      message: 'What color would you like the chosen shape? (Enter color keyword or hexadecimal number)',
+      name: 'shapeColor',
       
     },
   ])
   .then((answer) => {
-    if (answer.text.length > 3) {
+    if (answer.length > 3) {
       userPrompt();
     }else {
-      writeShapeFile('fileName.svg', answer);
+      writeToFile('fileName.svg', answer);
     }
 
   });
@@ -72,8 +72,10 @@ svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${a
 svgString += "</g>";
 svgString += "</svg>";
 
-fs.writeToFile('fileName.svg', svgString, (err) => {
-  err? console.log(err) : console.log("generated logo.svg");
+fs.writeFile(fileName, svgString, (err) => {
+  if (err) throw err;
+  console.log('The file has been saved!');
+
 });
 
 }
