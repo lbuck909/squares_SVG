@@ -3,12 +3,12 @@
 # Description
 This application allows an end user to generate a simple logo found in the "logo.svg" file
 
-# User Story
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+## User Story
+# AS a freelance web developer
+# I WANT to generate a simple logo for my projects
+# SO THAT I don't have to pay a graphic designer
 
-# Acceptance Criteria
+## Acceptance Criteria
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for text
 THEN I can enter up to three characters
