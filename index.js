@@ -60,15 +60,15 @@ let userShape;
     svgString += `<rect x="70" y="70" width="150" height="150" fill="${answer.shapeColor}"/>`;
   } else if (answer.shape === 'Circle'){
     userShape = new Circle();
-    svgString += `<circle cx="150" cy="150" r="90"  fill="${answer.shapeColor}"/>`;
+    svgString += `<circle cx="150" cy="130" r="90"  fill="${answer.shapeColor}"/>`;
   } else{
     userShape = new Triangle();
-    svgString += `<polygon points="0,200 300,200 150,0" fill="${answer.shapecolor}"/>;`
+    svgString += `<polygon points="0,200 300,200 150,0" fill="${answer.shapeColor}"/>;`
   }
 
 
 //text color and alignment. Use default font size of 30 (needs to be readable)
-svgString += `<text x="150" y="100" text-anchor="middle" font-size="50" fill="${answer.characterColor}">${answer.text}</text>`;
+svgString += `<text x="150" y="100" text-anchor="middle" font-size="60" fill="${answer.characterColor}">${answer.text}</text>`;
 svgString += "</g>";
 svgString += "</svg>";
 
