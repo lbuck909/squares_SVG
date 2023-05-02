@@ -63,7 +63,7 @@ let userShape;
     svgString += `<circle cx="150" cy="150" r="90"  fill="${answer.shapeColor}"/>`;
   } else{
     userShape = new Triangle();
-    svgString += `<polygon points="0,200 300,200 150,0 fill="${answer.shapecolor}"/>;`
+    svgString += `<polygon points="0,200 300,200 150,0" fill="${answer.shapecolor}"/>;`
   }
 
 
