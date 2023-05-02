@@ -38,7 +38,7 @@ function userPrompt() {
     if (answer.length > 3) {
       userPrompt();
     }else {
-      writeToFile('fileName.svg', answer);
+      writeToFile('logo.svg', answer);
     }
 
   });
@@ -57,7 +57,7 @@ svgString += "<g>";
 let userShape;
   if (answer.shape === 'Square') {
     userShape = new Square();
-    svgString += `rect x="70" y="70" width="150" height="150" fill="${answer.shapeColor}"/>`;
+    svgString += `<rect x="70" y="70" width="150" height="150" fill="${answer.shapeColor}"/>`;
   } else if (answer.shape === 'Circle'){
     userShape = new Circle();
     svgString += `<circle cx="150" cy="150" r="90"  fill="${answer.shapeColor}"/>`;
@@ -68,7 +68,7 @@ let userShape;
 
 
 //text color and alignment. Use default font size of 30 (needs to be readable)
-svgString += `<text x="150" y="100" text-anchor="middle" font-size"30" fill="${answer.characterColor}">${answer.text}</text>`;
+svgString += `<text x="150" y="100" text-anchor="middle" font-size="50" fill="${answer.characterColor}">${answer.text}</text>`;
 svgString += "</g>";
 svgString += "</svg>";
 
