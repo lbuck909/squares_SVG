@@ -6,12 +6,12 @@ A simple application that provides a simple SVG Logo maker for all to enjoy. The
 # Installation
 Users will need to install Inquirer@8.2.4 or later and Node.js v16
 
-# User Story
+*** User Story ***
  AS a freelance web developer
  I WANT to generate a simple logo for my projects
  SO THAT I don't have to pay a graphic designer
 
-# Acceptance Criteria
+*** Acceptance Criteria ***
  GIVEN a command-line application that accepts user input
  WHEN I am prompted for text
  THEN I can enter up to three characters
