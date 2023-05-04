@@ -1,7 +1,10 @@
 # Squares_SVG Week 10 Assignment
 
 # Description
-This application allows an end user to generate a simple logo found in the "logo.svg" file
+A simple application that provides a simple SVG Logo maker for all to enjoy. The end user can select a Triangle, Circle, or Square shaped logo with three initals within the center of the project. 
+
+# Installation
+Users will need to install Inquirer@8.2.4 or later and Node.js v16
 
 # User Story
 #AS a freelance web developer
@@ -37,27 +40,15 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 8. Enjoy your new custom created logo
 
 # Screenshots
+![ScreenShot](https://docs.google.com/document/u/0/?authuser%3D0%26usp%3Ddocs_web)
 
 
-Contributor
-
-License
-
-Username
-Email
-License
+# License
 License under the MIT license.
-#Description
-A simple application that provides a simple SVG Logo maker for all to enjoy. The end user can select a Triangle, Circle, or Square shaped logo with three initals within the center of the project. 
 
-#Installation
-Users will need to install Inquirer@8.2.4 or later and Node.js v16
+# Email
+laishabuck@gmail.com
+License
 
-Usage
-JSON, JavaScript, and Node
 
-Contributor
-n/a
 
-Contact Information
-lbuck909 laishabuck@gmail.com
